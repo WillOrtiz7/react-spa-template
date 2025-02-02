@@ -11,3 +11,5 @@
 ## TanstackRouter
 
 ## TanstackQuery
+
+## Jotai
