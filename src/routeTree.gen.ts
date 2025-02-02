@@ -11,11 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as SupabaseExampleImport } from './routes/supabaseExample'
 import { Route as ReactQueryExampleImport } from './routes/reactQueryExample'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const SupabaseExampleRoute = SupabaseExampleImport.update({
+  id: '/supabaseExample',
+  path: '/supabaseExample',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ReactQueryExampleRoute = ReactQueryExampleImport.update({
   id: '/reactQueryExample',
@@ -60,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReactQueryExampleImport
       parentRoute: typeof rootRoute
     }
+    '/supabaseExample': {
+      id: '/supabaseExample'
+      path: '/supabaseExample'
+      fullPath: '/supabaseExample'
+      preLoaderRoute: typeof SupabaseExampleImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -69,12 +83,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/reactQueryExample': typeof ReactQueryExampleRoute
+  '/supabaseExample': typeof SupabaseExampleRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/reactQueryExample': typeof ReactQueryExampleRoute
+  '/supabaseExample': typeof SupabaseExampleRoute
 }
 
 export interface FileRoutesById {
@@ -82,14 +98,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/reactQueryExample': typeof ReactQueryExampleRoute
+  '/supabaseExample': typeof SupabaseExampleRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/reactQueryExample'
+  fullPaths: '/' | '/about' | '/reactQueryExample' | '/supabaseExample'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/reactQueryExample'
-  id: '__root__' | '/' | '/about' | '/reactQueryExample'
+  to: '/' | '/about' | '/reactQueryExample' | '/supabaseExample'
+  id: '__root__' | '/' | '/about' | '/reactQueryExample' | '/supabaseExample'
   fileRoutesById: FileRoutesById
 }
 
@@ -97,12 +114,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ReactQueryExampleRoute: typeof ReactQueryExampleRoute
+  SupabaseExampleRoute: typeof SupabaseExampleRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ReactQueryExampleRoute: ReactQueryExampleRoute,
+  SupabaseExampleRoute: SupabaseExampleRoute,
 }
 
 export const routeTree = rootRoute
@@ -117,7 +136,8 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
-        "/reactQueryExample"
+        "/reactQueryExample",
+        "/supabaseExample"
       ]
     },
     "/": {
@@ -128,6 +148,9 @@ export const routeTree = rootRoute
     },
     "/reactQueryExample": {
       "filePath": "reactQueryExample.tsx"
+    },
+    "/supabaseExample": {
+      "filePath": "supabaseExample.tsx"
     }
   }
 }

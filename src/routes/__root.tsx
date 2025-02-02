@@ -16,7 +16,7 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="p-2 flex gap-4">
+      <div className="flex gap-4 p-2">
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>{" "}
@@ -25,6 +25,9 @@ export const Route = createRootRoute({
         </Link>
         <Link to="/reactQueryExample" className="[&.active]:font-bold">
           React Query Example
+        </Link>
+        <Link to="/supabaseExample" className="[&.active]:font-bold">
+          SupabaseExample
         </Link>
       </div>
       <hr />
