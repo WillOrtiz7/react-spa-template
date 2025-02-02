@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { HomeIndex } from "@/features/home/components";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -6,10 +6,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return (
-    <div className="flex flex-col justify-center align-middle items-center h-screen">
-      <h1 className="font-bold">Home</h1>
-      <Button>ShadCN Button</Button>
-    </div>
-  );
+  return <HomeIndex />;
 }
