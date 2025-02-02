@@ -16,12 +16,15 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="p-2 flex gap-2">
+      <div className="p-2 flex gap-4">
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>{" "}
         <Link to="/about" className="[&.active]:font-bold">
           About
+        </Link>
+        <Link to="/reactQueryExample" className="[&.active]:font-bold">
+          React Query Example
         </Link>
       </div>
       <hr />

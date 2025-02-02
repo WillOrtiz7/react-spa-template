@@ -30,8 +30,7 @@ function ReactQueryExample() {
 
   return (
     <div className="flex flex-col justify-center align-middle items-center h-screen">
-      <h1 className="font-bold">React Query example</h1>
-      <div>
+      <div className="flex flex-col items-center">
         <h2>{data.name}</h2>
         <img src={data.sprites.front_default} alt={data.name} />
       </div>
