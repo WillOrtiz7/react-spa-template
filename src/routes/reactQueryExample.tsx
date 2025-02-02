@@ -1,4 +1,4 @@
-import { ReactQueryExampleRoot } from "@/components/pages/react-query-example";
+import { ReactQueryExampleRoot } from "@/features/react-query-example/components";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/reactQueryExample")({

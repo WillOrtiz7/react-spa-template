@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useSetAtom } from "jotai";
-import { randomPokemonIdAtom } from "./atoms/atoms";
+import { randomPokemonIdAtom } from "../stores/atoms";
 
 export function RandomPokemonButton() {
   const setPokemonId = useSetAtom(randomPokemonIdAtom);

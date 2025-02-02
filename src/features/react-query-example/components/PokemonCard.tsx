@@ -1,6 +1,6 @@
 import { useAtomValue } from "jotai";
-import { randomPokemonIdAtom } from "./atoms/atoms";
-import { useGetPokemonById } from "./hooks/useGetPokemonById";
+import { useGetPokemonById } from "../hooks/useGetPokemonById";
+import { randomPokemonIdAtom } from "../stores/atoms";
 
 export function PokemonCard() {
   const pokemonId = useAtomValue(randomPokemonIdAtom);
