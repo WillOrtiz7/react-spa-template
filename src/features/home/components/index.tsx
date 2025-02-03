@@ -22,7 +22,7 @@ export function HomeIndex() {
           throw new Error("This is your first error!");
         }}
       >
-        Break the world
+        Test sentry error
       </Button>
       ;
     </div>
