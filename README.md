@@ -22,11 +22,11 @@ This project is a template for building a React Single Page Application (SPA) wi
 
 ## Technologies used
 
-- Vite (Bundler)
-- TailwindCSS (CSS solution)
-- ShadCN (Component library)
-- TanstackRouter (Client side router)
-- TanstackQuery (Data fetching)
-- Jotai (Global state)
-- Supabase (Backend as a Service)
-- Sentry (Monitoring)
+- [Vite](https://vitejs.dev/) (Bundler)
+- [TailwindCSS](https://tailwindcss.com/) (CSS solution)
+- [ShadCN](https://ui.shadcn.com/) (Component library)
+- [TanstackRouter](https://tanstack.com/router) (Client-side router)
+- [TanstackQuery](https://tanstack.com/query) (Data fetching)
+- [Jotai](https://jotai.org/) (Global state)
+- [Supabase](https://supabase.com/) (Backend as a Service)
+- [Sentry](https://sentry.io/) (Monitoring)
