@@ -1,5 +1,7 @@
 # React SPA Template
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/WillOrtiz7/react-spa-template)
+
 This project is a template for building a React Single Page Application (SPA) with various modern technologies.
 
 ## Prerequisites
