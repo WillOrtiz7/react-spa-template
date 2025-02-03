@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { libraryIcons } from "../constants/libraryIcons";
 import { LibraryIcon } from "./LibraryIcon";
 
@@ -16,6 +17,14 @@ export function HomeIndex() {
           />
         ))}
       </div>
+      <Button
+        onClick={() => {
+          throw new Error("This is your first error!");
+        }}
+      >
+        Break the world
+      </Button>
+      ;
     </div>
   );
 }
