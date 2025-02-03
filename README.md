@@ -12,15 +12,16 @@ This project is a template for building a React Single Page Application (SPA) wi
 
 - Clone the repo
 - Install deps with `pnpm i`
-- Setup Supabase project
-- Setup Sentry project for monitoring
+- [Setup Supabase project](https://supabase.com/)
+- [Setup Sentry project for monitoring](https://sentry.io/)
 - Fill your `.env.local` with the following
-  - VITE_SUPABASE_URL
-  - VITE_SUPABASE_ANON_KEY
-  - VITE_SENTRY_DSN
+  - `VITE_SUPABASE_URL=<https://<supabase_project_id>.supabase.co>`
+  - `VITE_SUPABASE_ANON_KEY=<supabase_anon_key>`
+  - `VITE_SENTRY_DSN=<sentry_dsn>`
 - Fill you `.env` with the following
-  - SUPABASE_PROJECT_ID
-- Run the `generate:types` script for full type safety on your Supabase client
+  - `SUPABASE_PROJECT_ID=<supabase_project_id>`
+- Run `pnpm generate:types`for full type safety when querying for data via the SupabaseJS client
+- Start the app locally by running `pnpm dev`
 
 ## Technologies used
 
